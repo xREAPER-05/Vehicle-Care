@@ -1,0 +1,7 @@
+{
+  "name": "RecoverCare_Final",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
