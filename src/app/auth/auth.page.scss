@@ -1,3 +1,57 @@
 ion-content {
-    --ion-background-color: #191924;
+    --ion-background-color: #0D1017;
+}
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+}
+.input {
+    background-color: #1A2030;
+    color: #575d6b;
+    width: 100%;
+    border-radius: 10px;
+    text-align: left;
+    text-indent: 10px;
+}
+.botons {
+    width: 85%;
+    height: 50px;
+    justify-content: center;
+    display: inline-flex;
+    background-color: #3c3e41;
+    border-radius: 10px;
+}
+.botons ion-button {
+    width: 50%;
+    height: 80%;
+    border-radius: 10px;
+    margin: 4px;
+    --background: #0D1017;
+    --color: #BEC1C8;
+}
+ion-button {
+    --background: #F97216;
+    --color: #d4d8e0;
+    width: 50%;
+}
+.olvidar{
+    color: #BEC1C8;
+    font-size: 10px;
+    text-align: right;
+}
+h1, p{
+    color: #BEC1C8;
+    font-size: 12px;
+    text-align: center;
+    width: 85%;
 }
