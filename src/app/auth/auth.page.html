@@ -1,18 +1,20 @@
 <ion-content [fullscreen]="true">
   <div class="principal">
     <h2>VEHICLE CARE</h2>
-    <h1>Bienvenido de vuelta</h1>
-    <p>Inicia sesión para continuar.</p>
+    <h1>{{modo === 'login'?'Bienvenido de vuelta':'Crear tu cuenta'}}</h1>
+    <p>{{modo === 'login'? 'Inicia sesión para continuar.':'Completa los datos para crear tu cuenta.'}}</p>
     <div class="botons">
-      <ion-button>Iniciar sesión</ion-button><ion-button>Registrarse</ion-button>
+      <ion-button class="inicio" [class.active]="modo === 'login'" (click)="modo = 'login'">Iniciar sesión</ion-button>
+      <ion-button class="registro" [class.active]="modo === 'register'" (click)="modo = 'register'">Registrarse</ion-button>
     </div>
     <br>
     <form class="formulario">
-      <label class="input"><ion-input type="text" placeholder="Ingrese su email"></ion-input></label>
-      <br>
-      <label class="input"><ion-input type="password" placeholder="Ingrese su contraseña"></ion-input></label>
-      <p class="olvidar">¿Olvidaste tu contraseña?</p>
+      <label class="input" *ngIf="modo === 'register'"><ion-input type="text" placeholder="Nombre completo"></ion-input></label>
+      <label class="input"><ion-input type="email" placeholder="Correo electronico"></ion-input></label>
+      <label class="input"><ion-input type="password" placeholder="Contraseña"></ion-input></label>
+      <label class="input" *ngIf="modo === 'register'"><ion-input type="password" placeholder="Confirme contraseña"></ion-input></label>
+      <p class="olvidar" *ngIf="modo === 'login'">¿Olvidaste tu contraseña?</p>
     </form>
-    <ion-button>Iniciar sesión</ion-button>
+    <ion-button>{{modo === 'login'?'Iniciar sesión':'Crear cuenta'}}</ion-button>
   </div>
 </ion-content>

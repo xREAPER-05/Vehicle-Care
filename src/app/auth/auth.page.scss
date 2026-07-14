@@ -22,6 +22,7 @@ form {
     border-radius: 10px;
     text-align: left;
     text-indent: 10px;
+    margin: 6px;
 }
 .botons {
     width: 85%;
@@ -36,13 +37,12 @@ form {
     height: 80%;
     border-radius: 10px;
     margin: 4px;
-    --background: #0D1017;
-    --color: #BEC1C8;
 }
 ion-button {
     --background: #F97216;
     --color: #d4d8e0;
     width: 50%;
+    margin-top: 10px;
 }
 .olvidar{
     color: #BEC1C8;
@@ -54,4 +54,12 @@ h1, p{
     font-size: 12px;
     text-align: center;
     width: 85%;
+}
+.botons .registro, .botons .inicio {
+    --background: #3c3e41;
+    --color: #4d4e50;
+}
+.botons .active {
+    --background: #0D1017;
+    --color: #BEC1C8;
 }
