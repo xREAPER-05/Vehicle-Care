@@ -9,12 +9,16 @@
     </div>
     <br>
     <form class="formulario">
-      <label class="input" *ngIf="modo === 'register'"><ion-input type="text" placeholder="Nombre completo"></ion-input></label>
-      <label class="input"><ion-input type="email" placeholder="Correo electronico"></ion-input></label>
-      <label class="input"><ion-input type="password" placeholder="Contraseña"></ion-input></label>
-      <label class="input" *ngIf="modo === 'register'"><ion-input type="password" placeholder="Confirme contraseña"></ion-input></label>
+      <label class="input" *ngIf="modo === 'register'">
+        <ion-input name="name" type="text" placeholder="Nombre completo" [(ngModel)]="usuario.name"></ion-input></label>
+      <label class="input">
+        <ion-input name="email" type="email" placeholder="Correo electronico" [(ngModel)]="usuario.email"></ion-input></label>
+      <label class="input">
+        <ion-input name="password" type="password" placeholder="Contraseña" [(ngModel)]="usuario.password"></ion-input></label>
+      <label class="input" *ngIf="modo === 'register'">
+        <ion-input name="passwordConfirm" type="password" placeholder="Confirme contraseña" [(ngModel)]="usuario.passwordConfirm"></ion-input></label>
       <p class="olvidar" *ngIf="modo === 'login'">¿Olvidaste tu contraseña?</p>
     </form>
-    <ion-button>{{modo === 'login'?'Iniciar sesión':'Crear cuenta'}}</ion-button>
+    <ion-button (click)="accionPrincipal()">{{modo === 'login'?'Iniciar sesión':'Crear cuenta'}}</ion-button>
   </div>
 </ion-content>
